@@ -20,11 +20,11 @@ public class Test
 
         APStudent currStudent = new APStudent(first, last);
         while(!input.equals("end"))
-        {               
+        {
             System.out.println("Enter a Student's AP Subject or \"end\" to quit: ");
             scan.nextLine();
             input = scan.nextLine();
-            if(input.equals("end")) 
+            if(input.equals("end"))
                 break;
 
             System.out.println("Enter a Student's AP Score: ");

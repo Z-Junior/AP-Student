@@ -93,7 +93,7 @@ public class APStudent
      */
     public int findHighestExamScore()
     {
-        double iHigh = 0;
+        int iHigh = 0;
 
         for (APExam exam : myExams)
             if (exam.getScore() > iHigh)
