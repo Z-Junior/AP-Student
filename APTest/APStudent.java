@@ -81,7 +81,10 @@ public class APStudent
     {      
         double fSum = 0.0;
 
+        for (APExam exam : myExams)
+            fSum += exam.getScore();
 
+        return fSum / myExams.size();
     } 
 
     /**
@@ -89,8 +92,13 @@ public class APStudent
      *  
      */
     public int findHighestExamScore()
-    {       
-       
+    {
+        double iHigh = 0;
+
+        for (APExam exam : myExams)
+            if (exam.getScore() > iHigh)
+                iHigh = exam.getScore();
+        return iHigh;
     } 
 
     /**
@@ -99,7 +107,12 @@ public class APStudent
      */
     public int numberOfFives()
     {       
-           
+        int iCount = 0;
+
+        for (APExam exam : myExams)
+            if (exam.getScore() == 5)
+                iCount++;
+        return iCount;
     } 
 
     public String toString()
