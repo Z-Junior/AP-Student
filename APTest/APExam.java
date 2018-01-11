@@ -12,8 +12,8 @@ public class APExam
      */
     public APExam()
     {
-        // initialise instance variables
-     
+        this.mySubject = "";
+        this.myScore = 1;
     }
 
     /**
@@ -21,8 +21,8 @@ public class APExam
      */
     public APExam(String subject, int score)
     {
-        // initialise instance variables
-       
+        this.mySubject = subject;
+        this.myScore = score;
     }
 
     /**
@@ -30,7 +30,7 @@ public class APExam
      */
     public void setSubject(String newSub)
     {
-      
+        this.mySubject = newSub;
     }
 
     /**
@@ -38,7 +38,7 @@ public class APExam
      */
     public void setScore(int newScore)
     {
-       
+        this.myScore = newScore;
     }
 
     /**
@@ -46,7 +46,7 @@ public class APExam
      */
     public String getSubject()
     {
-       
+        return this.mySubject;
     }
 
     /**
@@ -54,7 +54,7 @@ public class APExam
      */
     public int getScore()
     {
-        
+        return this.myScore;
     }
 
     /**
@@ -62,7 +62,7 @@ public class APExam
      */
     public int compareTo(APExam a)
     {
-        
+        return this.getScore() - a.getScore();
     }
 
     /**
@@ -70,7 +70,7 @@ public class APExam
      */
     public boolean equals(APExam a)
     {
-       
+        return this.mySubject.equalsIgnoreCase(a.getSubject()) && this.myScore == a.getScore();
     }
 
     /**
@@ -78,7 +78,7 @@ public class APExam
      */
     public String toString()
     {
-        
+        return String.format("%s: %d", this.mySubject, this.myScore);
     }
 }
 

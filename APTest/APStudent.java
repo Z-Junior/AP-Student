@@ -10,8 +10,10 @@ public class APStudent
      * Default Constructor for objects of class APStudent
      */
     public APStudent()
-    {        
-          
+    {
+        this.myFirstName = "";
+        this.myLastName = "";
+        this.myExams = new ArrayList<>();
     }
 
     /**
@@ -19,7 +21,9 @@ public class APStudent
      */
     public APStudent(String f, String l)
     {
-           
+        this.myFirstName = f;
+        this.myLastName = l;
+        this.myExams = new ArrayList<>();
     }
 
     /**
@@ -27,7 +31,7 @@ public class APStudent
      */
     public String getFirstName()
     {
-              
+        return myFirstName;
     }
 
     /**
@@ -35,8 +39,7 @@ public class APStudent
      */
     public String getLastName()
     {
-
-        
+        return myLastName;
     }
 
     /**
@@ -44,7 +47,7 @@ public class APStudent
      */
     public ArrayList<APExam> getmyExams()
     {
-                
+        return myExams;
     }
 
     /**
@@ -52,7 +55,7 @@ public class APStudent
      */
     public void setFirstName(String fName)
     {
-              
+        this.myFirstName = fName;
     }
 
     /**
@@ -60,7 +63,7 @@ public class APStudent
      */
     public void setLastName(String lName)
     {      
-               
+        this.myLastName = lName;
     }
 
     /**
@@ -68,7 +71,7 @@ public class APStudent
      */
     public void addExam(APExam e)
     {      
-            
+        this.myExams.add(e);
     }
 
     /**
@@ -76,7 +79,9 @@ public class APStudent
      */
     public double computeExamAverage()
     {      
-             
+        double fSum = 0.0;
+
+
     } 
 
     /**
